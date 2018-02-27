@@ -1,7 +1,7 @@
 
 <view class='detail-container'>
-  <image src="{{detailInfo.postImg}}" class='detail-banner' ></image>
-  <image class='audio' src='/images/icon/music.png'></image>
+  <image src="{{isPlay?detailInfo.music.coverImgUrl:detailInfo.postImg}}" class='detail-banner' ></image>
+  <image class='audio' src="{{isPlay?'/images/icon/pause.png':'/images/icon/music.png'}}" catchtap='onMusicTap'></image>
   <view class='author-date'>
     <image src="/images/avator/avator1.jpg" class='avatar'></image>
     <text class='author'>{{detailInfo.author}}</text> 

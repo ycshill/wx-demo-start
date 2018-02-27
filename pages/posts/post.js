@@ -23,4 +23,12 @@ Page({
       url: `post-detail/post-detail?id=${curPostId}`,
     })
   },
+  onSwipeTap: function (event) {
+    // target 是当前点击的对象 ,currentTarget 是被捕获的对象
+    // target 就是图像，currentTarget就是 swiper
+    const curPostId = event.target.dataset.postid;
+    wx.navigateTo({
+      url: `post-detail/post-detail?id=${curPostId}`,
+    })
+  },
 })

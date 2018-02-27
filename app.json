@@ -2,10 +2,31 @@
   "pages": [
     "pages/welcome/welcome",
     "pages/posts/post",
-    "pages/posts/post-detail/post-detail"
+    "pages/movies/movies",
+    "pages/posts/post-detail/post-detail",
+    "pages/movies/more-movie/more-movie",
+    "pages/movies/movie-detail/movie-detail"
   ],
-  "window":{
-    "navigationBarBackgroundColor":"#b3d4db",
+  "window": {
+    "navigationBarBackgroundColor": "#b3d4db",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#3385ff",
+    "list": [      
+      {
+        "iconPath": "/images/icon/reading.png",
+        "selectedIconPath": "/images/icon/reading-select.png",
+        "pagePath": "pages/posts/post",
+        "text": "文章"
+      },
+      {
+        "iconPath": "/images/icon/movies.png",
+        "selectedIconPath": "/images/icon/movies-select.png",
+        "pagePath": "pages/movies/movies",
+        "text": "视频"
+      }
+    ]
   }
 }

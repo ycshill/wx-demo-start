@@ -1,15 +1,12 @@
 Page({
   onTap: function () {
-    wx.redirectTo ({
+    wx.switchTab({
       url: '../posts/post',
-      success: function () {
-        console.log('success')
+      success:function(){
+        console.log('chengogng');
       },
       fail: function () {
-        console.log('fail');
-      },
-      complete: function () {
-        console.log('complete');
+        console.log('shibai')
       }
     });
   },
