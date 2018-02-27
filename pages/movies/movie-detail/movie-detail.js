@@ -16,15 +16,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const that = this;
     const movieId = options.id;
     const url = `${app.globalData.g_dobanBaseUrl}/v2/movie/subject/${movieId}`;
     const movie = new Movie(url);
-    movie.getMovieData(function (movie) {
-      that.setData({
+
+    // const that = this;  
+    // movie.getMovieData(function (movie) {
+    //   that.setData({
+    //     movie: movie,
+    //   })
+    // })
+
+    // 将上面的代码改用箭头函数
+    movie.getMovieData( (movie) => {
+      this.setData({
         movie: movie,
       })
-    })
+    });
   },
   viewMoviePostImg: function (event) {
     const src = event.currentTarget.dataset.src;
